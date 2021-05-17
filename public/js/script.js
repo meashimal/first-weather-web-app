@@ -7,9 +7,10 @@
 var myurl= window.location.href;
 // console.log(myurl);
 
+
 // console.log(document.getElementsByClassName("navin"))
 
-if(myurl!="http://localhost:3000/about"){
+if(!(myurl.includes("about"))){
     var active = document.getElementsByClassName("navin");
     // console.log(active);
     active[0].style.backgroundColor= "rgba(128, 128, 128, 0.39)";
