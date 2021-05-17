@@ -8,6 +8,7 @@ const getlatlong = require("./utils/getlatlong");
 const getweather = require("./utils/getweather");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //setting up path names
 const publicpath = path.join(__dirname,'../public');
@@ -77,6 +78,6 @@ app.get("*",(req,res)=>{
 
 
 
-app.listen(3000, ()=>{
-    console.log("server is running");
+app.listen(port, ()=>{
+    console.log("server is running on " + port);
 });
